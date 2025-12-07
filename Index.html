@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ========== SEO BÁSICO ========== -->
+<title>Kely Rodrigues Psicóloga | Atendimento Online</title>
+<meta name="description" content="Kely Rodrigues - Psicóloga (CRP 06/222822). Atendimento psicológico online para adolescentes e adultos na abordagem psicanalítica.">
+<meta name="keywords" content="psicóloga, psicologia online, atendimento psicológico, psicanálise, terapia, Kely Rodrigues">
+<meta name="author" content="Kely Rodrigues">
+
+<!-- ========== OPEN GRAPH (FACEBOOK, WHATSAPP, INSTAGRAM) ========== -->
+<meta property="og:title" content="Kely Rodrigues Psicóloga | Atendimento Online">
+<meta property="og:description" content="Psicóloga CRP 06/222822. Atendimento psicológico online para adolescentes e adultos, com abordagem psicanalítica.">
+<meta property="og:image" content="URL-DA-IMAGEM-AQUI">
+<meta property="og:url" content="URL-DO-SEU-SITE-AQUI">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kely Rodrigues Psicóloga">
+
+<!-- ========== TWITTER CARD ========== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kely Rodrigues Psicóloga | Atendimento Online">
+<meta name="twitter:description" content="Atendimento psicológico online para adolescentes e adultos. Abordagem psicanalítica.">
+<meta name="twitter:image" content="logoimg.png">
+
+<!-- ========== CONTATO E INFO ESTRUTURADA ========== -->
+<meta property="og:phone_number" content="+5511976923105">
+<meta property="og:email" content="psicologa.kelyrodrigues@gmail.com">
+<meta name="instagram:username" content="@psi.kelyrodrigues">
+
+<!-- ========== PREVENÇÃO DE LINK AZUL NO IPHONE ========== -->
+<meta name="format-detection" content="telephone=no">
+    
+<style>
+
+/* ======== GERAL ======== */
+
+body {
+    margin: 0;
+    font-family: 'Neuton', serif;
+    background: #fff;
+}
+
+h1, h2, h3, p {
+    margin: 0 0 15px;
+}
+
+/* ======== HEADER ======== */
+
+header {
+    width: 100%;
+    background: #F3DFF1; /* lilás claro da foto */
+    padding: 1px 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 110px; 
+    height: 110px;
+    display: block;
+}
+
+/* Ícone hambúrguer */
+.hamburguer {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburguer span {
+    height: 4px;
+    background: #A38DA3;
+    border-radius: 5px;
+}
+
+/* ======== MENU LATERAL ======== */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    background: #8C4A98; /* cor roxa exata que você usou */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.menu-lateral.active {
+    right: 0;
+}
+
+/* Botão de fechar */
+.btn-fechar {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.menu-lateral h3 {
+    margin-top: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 8px;
+}
+
+.menu-lateral p, .menu-lateral a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 10px 0;
+    display: block;
+}
+
+/* ======== CONTEÚDO ======== */
+
+.container {
+    padding: 20px;
+}
+
+.titulo {
+    color: #5C3F2F;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ======== WHATSAPP FLOAT ======== */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.whatsapp-btn img {
+    width: 35px;
+}
+/* ======== GALERIA ======== */
+
+.galeria-zoom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.galeria-zoom .foto {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.galeria-zoom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.galeria-zoom img:hover {
+    transform: scale(1.05);
+}
+
+/* ======== MODAL ======== */
+
+.zoom-modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.zoom-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.zoom-modal .fechar {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+    quem-sou-eu {
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.quem-sou-eu h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #F3DFF1; /* lilás do seu site */
+}
+
+.quem-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top:30px;
+}
+
+.quem-container img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #5C3F2F;
+}
+
+.quem-texto p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    .quem-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quem-texto p {
+        text-align: left;
+    }
+}
+    /* ===================== */
+/* Animações adicionais */
+/* ===================== */
+
+/* Botão WhatsApp balançando */
+/* ===================== */
+/* Botão WhatsApp animado */
+/* ===================== */
+
+/* Animação de entrada */
+@keyframes entrar {
+    0% {
+        transform: translateY(100px); /* começa fora da tela, abaixo */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* posição final */
+        opacity: 1;
+    }
+}
+
+/* Animação de pulsar */
+@keyframes pulsar {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); } /* aumenta 15% no meio da animação */
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+
+    /* Animação de entrada */
+    animation: entrar 1s ease-out forwards, pulsar 2s infinite 1s; 
+    /* A primeira é a entrada, a segunda é o pulsar que começa depois de 1s */
+}
+
+.whatsapp-btn img {
+    width: 35px;
+}
+
+</style>
+</head>
+
+<body>
+<section class="quem-sou-eu">
+    <div class="quem-container">
+        <img src="imgperfil.png" alt="Psicológa kely Rodrigues"
+            loading="lazy">
+        
+        <div class="quem-texto">
+            <p>Sou Kely Rodrigues, Psicóloga (CRP 06/222822), especializada no atendimento clínico de adolescentes e adultos pela perspectiva psicanalítica. Entendo o processo terapêutico como um encontro que possibilita investigar aquilo que, muitas vezes, está além do que conseguimos nomear — conflitos internos, repetições, dores e desejos que insistem em aparecer. Através da escuta atenta, ética e sensível, ofereço um espaço para que você possa se compreender de forma mais profunda, construir novas narrativas e desenvolver formas mais saudáveis de se relacionar consigo e com o mundo.</p>
+
+            <p>Meu atendimento é personalizado, feito com carinho, paciência e atenção a cada detalhe — sempre respeitando o tempo e o conforto de quem está comigo.</p>
+
+            <p>Seja para você ou para quem você ama, estou aqui para tornar esse momento especial e inesquecível!</p>
+        </div>
+    </div>
+</section>
+<!-- ========== CONTEÚDO ========== -->
+<div class="container">
+    <h1 class="titulo">O que é psicanálise?</h1>
+    <p>
+A psicanálise é uma abordagem da psicologia que se dedica a compreender a mente humana em profundidade. Ela investiga nossos pensamentos, emoções e comportamentos, buscando identificar padrões, conflitos internos e experiências que influenciam a forma como vivemos e nos relacionamos. Através da psicanálise, é possível refletir sobre sentimentos, entender situações do passado que ainda impactam o presente e desenvolver estratégias para lidar com desafios emocionais. O objetivo é promover autoconhecimento, equilíbrio emocional e crescimento pessoal, oferecendo um espaço seguro e acolhedor para explorar suas questões mais íntimas e encontrar caminhos para o bem-estar.</p>
+
+   <h2 class="titulo">Beneficios da psicanálise</h2>
+   <p>Benefícios da psicanálise
+
+Maior autoconhecimento e compreensão de si mesmo
+
+Identificação e reflexão sobre padrões emocionais e comportamentais
+
+Desenvolvimento de estratégias para lidar com conflitos internos
+
+Melhora na gestão de sentimentos como ansiedade, tristeza e estresse
+
+Aumento do equilíbrio emocional e bem-estar
+
+Melhora nos relacionamentos pessoais e profissionais
+
+Espaço seguro e acolhedor para explorar questões íntimas e encontrar soluções pessoais </p>
+<h2 class="titulo">Para quem é a psicanálise?</h2>
+<p>A psicanálise é indicada para qualquer pessoa que deseja compreender melhor seus pensamentos, emoções e comportamentos. Ela pode ser especialmente útil para quem enfrenta ansiedade, estresse, conflitos internos, dificuldades de relacionamento ou busca autoconhecimento e crescimento pessoal. Independentemente da situação, a psicanálise oferece um espaço seguro e acolhedor para refletir sobre sua vida, identificar padrões e desenvolver estratégias para lidar com desafios emocionais de forma mais saudável.</p>
+<h2 class="titulo">Como funciona o atendimento online?</h2>
+<p>As sessões são realizadas de forma totalmente online, garantindo conforto, privacidade e segurança. Você pode participar de onde estiver, no horário mais conveniente para sua rotina. Cada encontro tem duração definida e é conduzido de maneira acolhedora e profissional, permitindo que você explore pensamentos, sentimentos e experiências em um espaço seguro, recebendo suporte para enfrentar desafios emocionais e promover autoconhecimento.</p>
+
+<section class="agende-agora" style="text-align:center; padding:40px 20px; background:#fff; border-radius:10px; margin:40px 20px;">
+  <h2 class="titulo" style="color:#5C3F2F; font-size:28px; margin-bottom:20px;">Agende sua sessão</h2>
+  <p style="font-size:18px; color:#333; margin-bottom:30px;">
+    Entre em contato pelo WhatsApp
+  </p>
+  <a href="https://api.whatsapp.com/send?phone=5511976923105&text=Ol%C3%A1%2C%20entrei%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" style="display:inline-block; background:#B28E7B; color:#5C3F2F; font-weight:bold; padding:15px 25px; border-radius:50px; font-size:18px; text-decoration:none; box-shadow:0px 4px 10px rgba(0,0,0,0.2); transition:0.3s;" 
+     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0px 6px 15px rgba(0,0,0,0.3)';" 
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0px 4px 10px rgba(0,0,0,0.2)';">
+    Fale comigo agora
+  </a>
+</section>
+<!-- MODAL DE ZOOM -->
+<div id="zoomModal" class="zoom-modal" onclick="fecharZoom()">
+  <span class="fechar">X</span>
+  <img id="zoomImg">
+</div>
+<!-- ========== BOTÃO WHATSAPP ========== -->
+<a href="https://api.whatsapp.com/send?phone=5511976923105&text=Ol%C3%A1%2C%20entrei%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" class="whatsapp-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+<!-- Footer -->
+<!-- Footer -->
+<footer style="text-align: center; padding: 40px 20px; background-color: #fff; color: #7F7F7F; font-family: Arial, sans-serif; margin-top: 50px;">
+  <p style="margin: 0; font-size: 16px;">© 2025 Psi Kely rodrigues</p>
+  <p style="margin: 5px 0 0 0; font-size: 14px;">
+    Webdesign: <a href="https://www.instagram.com/wweb.studio?igsh=OWhsc3VrbXF5Y3dh" target="_blank" style="color: #7F7F7F; text-decoration: none;">wwebstudio</a>
+  </p>
+</footer>
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+function abrirZoom(src) {
+    document.getElementById("zoomModal").style.display = "flex";
+    document.getElementById("zoomImg").src = src;
+}
+
+function fecharZoom() {
+    document.getElementById("zoomModal").style.display = "none";
+}
+    const imgs = document.querySelectorAll('.galeria-zoom img');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.animation = `aparecer 0.6s forwards`;
+        }
+    });
+}, { threshold: 0.1 });
+
+imgs.forEach(img => observer.observe(img));
+       </script>
+
+</body>
+  </html>
