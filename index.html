@@ -310,16 +310,30 @@ header {
 .whatsapp-btn img {
     width: 35px;
 }
+.img-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%; /* cria o círculo */
+    overflow: hidden;   /* garante que nada passe do círculo */
+    border: 4px solid #5C3F2F;
+    flex-shrink: 0;     /* impede que encolha no flex */
+}
 
+.img-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* garante que a imagem preencha sem distorcer */
+    display: block;     /* remove gaps de linha */
+}
 </style>
 </head>
 
 <body>
 <section class="quem-sou-eu">
-    <div class="quem-container">
-        <img src="imgperfil.png" alt="Psicológa kely Rodrigues"
-            loading="lazy">
-        
+    <div class="img-circle">
+    <img src="imgperfil.jpg" alt="Psicóloga Kely Rodrigues" loading="lazy">
+    </div>
+    
         <div class="quem-texto">
             <p>Sou Kely Rodrigues, Psicóloga (CRP 06/222822), especializada no atendimento clínico de adolescentes e adultos pela perspectiva psicanalítica. Entendo o processo terapêutico como um encontro que possibilita investigar aquilo que, muitas vezes, está além do que conseguimos nomear — conflitos internos, repetições, dores e desejos que insistem em aparecer. Através da escuta atenta, ética e sensível, ofereço um espaço para que você possa se compreender de forma mais profunda, construir novas narrativas e desenvolver formas mais saudáveis de se relacionar consigo e com o mundo.</p>
 
