@@ -325,22 +325,75 @@ header {
     object-fit: cover;  /* garante que a imagem preencha sem distorcer */
     display: block;     /* remove gaps de linha */
 }
+    .quem-container {
+    display: flex;
+    flex-direction: column; /* mobile: coluna */
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+/* Círculo da imagem */
+.img-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #5C3F2F;
+    flex-shrink: 0; /* evita que encolha no flex */
+}
+
+.img-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* preenche o círculo */
+    display: block;
+}
+
+/* Texto da psicóloga */
+.quem-texto p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center; /* mobile centralizado */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .quem-container {
+        flex-direction: row; /* lado a lado */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quem-texto {
+        max-width: 600px; /* controla largura do texto */
+        margin-left: 30px; /* espaço entre círculo e texto */
+    }
+
+    .quem-texto p {
+        text-align: left; /* texto alinhado à esquerda no desktop */
+    }
+}
 </style>
+
 </head>
 
 <body>
 <section class="quem-sou-eu">
+    <div class="quem-container">
     <div class="img-circle">
-    <img src="imgperfil.jpg" alt="Psicóloga Kely Rodrigues" loading="lazy">
+        <img src="imgperfil.jpg" alt="Psicóloga Kely Rodrigues" loading="lazy">
     </div>
     
-        <div class="quem-texto">
-            <p>Sou Kely Rodrigues, Psicóloga (CRP 06/222822), especializada no atendimento clínico de adolescentes e adultos pela perspectiva psicanalítica. Entendo o processo terapêutico como um encontro que possibilita investigar aquilo que, muitas vezes, está além do que conseguimos nomear — conflitos internos, repetições, dores e desejos que insistem em aparecer. Através da escuta atenta, ética e sensível, ofereço um espaço para que você possa se compreender de forma mais profunda, construir novas narrativas e desenvolver formas mais saudáveis de se relacionar consigo e com o mundo.</p>
+    <div class="quem-texto">
+        <p>Sou Kely Rodrigues, Psicóloga (CRP 06/222822), especializada no atendimento clínico de adolescentes e adultos pela perspectiva psicanalítica. Entendo o processo terapêutico como um encontro que possibilita investigar aquilo que, muitas vezes, está além do que conseguimos nomear — conflitos internos, repetições, dores e desejos que insistem em aparecer. Através da escuta atenta, ética e sensível, ofereço um espaço para que você possa se compreender de forma mais profunda, construir novas narrativas e desenvolver formas mais saudáveis de se relacionar consigo e com o mundo.</p>
 
-            <p>Meu atendimento é personalizado, feito com carinho, paciência e atenção a cada detalhe — sempre respeitando o tempo e o conforto de quem está comigo.</p>
+        <p>Meu atendimento é personalizado, feito com carinho, paciência e atenção a cada detalhe — sempre respeitando o tempo e o conforto de quem está comigo.</p>
 
-            <p>Seja para você ou para quem você ama, estou aqui para tornar esse momento especial e inesquecível!</p>
-        </div>
+        <p>Seja para você ou para quem você ama, estou aqui para tornar esse momento especial e inesquecível!</p>
+    </div>
     </div>
 </section>
 <!-- ========== CONTEÚDO ========== -->
